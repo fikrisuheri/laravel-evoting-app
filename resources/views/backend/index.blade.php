@@ -1,20 +1,75 @@
 @extends('layouts.backend.app')
 @section('content')
-<div class="container-fluid">
-    <div class="row">
-      <div class="col-md-3">
-        <div class="card o-hidden">
-            <div class="bg-primary b-r-4 card-body">
-                <div class="media static-top-widget">
-                    <div class="align-self-center text-center"><i data-feather="users"></i></div>
-                    <div class="media-body"><span class="m-0">User</span>
-                        <h4 class="mb-0 counter">1</h4><i class="icon-bg"
-                            data-feather="users"></i>
+    {{-- <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                <div class="card card-statistic-1">
+                    <div class="card-icon bg-primary">
+                        <i class="far fa-user"></i>
+                    </div>
+                    <div class="card-wrap">
+                        <div class="card-header">
+                            <h4>Total {{ __('menu.candidate') }} </h4>
+                        </div>
+                        <div class="card-body">
+                            10
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                <div class="card card-statistic-1">
+                    <div class="card-icon bg-warning">
+                        <i class="far fa-user"></i>
+                    </div>
+                    <div class="card-wrap">
+                        <div class="card-header">
+                            <h4>Total {{ __('menu.voter') }} </h4>
+                        </div>
+                        <div class="card-body">
+                            10
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                <div class="card card-statistic-1">
+                    <div class="card-icon bg-success">
+                        <i class="far fa-user"></i>
+                    </div>
+                    <div class="card-wrap">
+                        <div class="card-header">
+                            <h4>Total {{ __('menu.major') }} </h4>
+                        </div>
+                        <div class="card-body">
+                            10
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                <div class="card card-statistic-1">
+                    <div class="card-icon bg-danger">
+                        <i class="far fa-user"></i>
+                    </div>
+                    <div class="card-wrap">
+                        <div class="card-header">
+                            <h4>Total {{ __('menu.class') }} </h4>
+                        </div>
+                        <div class="card-body">
+                            10
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-      </div>
-    </div>
-</div>
+    </div> --}}
+    @component('components.backend.table.datatable')
+        @slot('head')
+            
+        @endslot
+        @slot('body')
+            
+        @endslot
+    @endcomponent
 @endsection
